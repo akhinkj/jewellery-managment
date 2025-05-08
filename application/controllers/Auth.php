@@ -37,6 +37,7 @@ class Auth extends CI_Controller {
 
     public function logout() {
         $this->session->unset_userdata('logged_in');
-        redirect('auth/login');
+        redirect('index.php/auth/login');
     }
 }
+
