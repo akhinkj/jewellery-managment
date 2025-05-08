@@ -19,7 +19,7 @@
         ]); ?>
     </div>
 </div>
-    <h2>Product List</h2>
+    <!-- <h2>Product List</h2>
     <table id="products-table" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
@@ -31,7 +31,7 @@
                 <th>Actions</th>
             </tr>
         </thead>
-    </table>
+    </table> -->
 </div>
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.css"/>
@@ -41,7 +41,7 @@ $(document).ready(function() {
     $('#products-table').DataTable({
         "processing": true,
         "serverSide": true,
-        "ajax": "<?= base_url('admin/products/ajax_list') ?>",
+        "ajax": "<?= base_url('index.php/admin/products/ajax_list') ?>",
         "columns": [
             { "data": "id" },
             { "data": "name" },
@@ -61,8 +61,8 @@ $(document).ready(function() {
             { 
                 "data": "id",
                 "render": function(data) {
-                    return '<a href="<?= base_url('admin/products/edit/') ?>' + data + '" class="btn btn-sm btn-warning">Edit</a>' +
-                           '<a href="<?= base_url('admin/products/delete/') ?>' + data + '" class="btn btn-sm btn-danger">Delete</a>';
+                    return '<a href="<?= base_url('index.php/admin/products/edit/') ?>' + data + '" class="btn btn-sm btn-warning">Edit</a>' +
+                           '<a href="<?= base_url('index.php/admin/products/delete/') ?>' + data + '" class="btn btn-sm btn-danger">Delete</a>';
                 }
             }
         ],

@@ -22,9 +22,9 @@
                      style="height:50px">
             </td>
             <td>
-                <a href="<?= base_url('admin/products/edit/'.$product->id) ?>" 
+                <a href="<?= base_url('index.php/admin/products/edit/'.$product->id) ?>" 
                    class="btn btn-sm btn-warning">Edit</a>
-                <a href="<?= base_url('admin/products/delete/'.$product->id) ?>" 
+                <a href="<?= base_url('index.php/admin/products/delete/'.$product->id) ?>" 
                    class="btn btn-sm btn-danger">Delete</a>
             </td>
         </tr>
